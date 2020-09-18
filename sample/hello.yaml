@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: hello-kubernetes
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: hello-kubernetes
@@ -24,6 +24,7 @@ spec:
     metadata:
       labels:
         app: hello-kubernetes
+        server: web-app
     spec:
       containers:
       - name: hello-kubernetes
